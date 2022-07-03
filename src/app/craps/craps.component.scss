@@ -1,0 +1,222 @@
+@import "../../variables.scss";
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    .container {
+        margin: 75px;
+        height: calc(100vh - 150px);
+        width: calc(100vw - 150px);
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+    .container {
+        margin: 75px;
+        height: calc(100vh - 150px);
+        width: calc(100vw - 150px);
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+    .container {
+        margin: 100px;
+        height: calc(100vh - 200px);
+        width: calc(100vw - 200px);
+    }
+ }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+    .container {
+        margin: 100px;
+        height: calc(100vh - 200px);
+        width: calc(100vw - 200px);
+    }
+ }
+
+.board {
+    display: grid;
+    min-width: 800px;
+    height: 100%;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-rows:  auto auto auto auto auto auto;
+    background-image: linear-gradient(to top left, $boardBackgroundColor1, $boardBackgroundColor2);
+}
+
+.dont-come-bar {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $boardBorderColor;
+    grid-column: 7 / span 1;
+    grid-row: 1 / span 2;
+    color: gray;
+}
+
+.dont-come-bar:hover {
+    background-color: $boardHover;
+    color: white;
+    cursor: pointer;
+}
+
+.dont-pass-bar-side {
+    grid-column: 8 / span 1; 
+    grid-row: 1 / span 3;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $boardBorderColor;
+    min-width: 50px;
+    color: gray;
+}
+
+.come {
+    grid-column: 2 / span 6; 
+    grid-row: 3 / span 1;
+    border: 1px solid $boardBorderColor;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    color: red;
+    text-shadow: 0 0 black, 0 0 black, 1px 0 white, 0 -1px white;
+    font-size: 5vw;
+}
+
+.come:hover {
+    background-color: $boardHover;
+    cursor: pointer;
+}
+
+.field {
+    grid-column: 2 / span 5;
+    grid-row: 4 / span 1;
+    border: 1px solid $boardBorderColor;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+}
+
+.field:hover {
+    background-color: $boardHover;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    cursor: pointer;
+}
+
+.dont-pass-bar-bottom {
+    grid-column: 2 / span 5;
+    grid-row: 5 / span 1;
+    border: 1px solid $boardBorderColor;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    color: gray;
+}
+
+.dont-pass-bar-bottom:hover {
+    background-color: $boardHover;
+    color: white;
+    cursor: pointer;
+}
+
+.pass-line-bottom {
+    grid-column: 2 / span 6;
+    grid-row: 6 / span 1;
+    min-height: 50px;
+    border: 1px solid $boardBorderColor;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+}
+
+.pass-line-bottom:hover {
+    background-color: $boardHover;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    cursor: pointer;
+}
+
+.pass-line-side {
+    grid-column: 9 / span 1;
+    grid-row: 1 / span 6;
+    min-width: 50px;
+    border: 1px solid $boardBorderColor;
+    border-left: none;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.big68 {
+    grid-column: 7 / span 1;
+    grid-row: 4 / span 2;
+    border: 1px solid $boardBorderColor;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: #ff7070;
+}
+
+.big68:hover {
+    background-color: $boardHover;
+    color: white;
+    cursor: pointer;
+}
+
+.field {
+    font-size: 40px;
+    color: orange;
+}
+
+.field:hover {
+    background-color: $boardHover;
+    cursor: pointer;
+}
+
+.field-numbers {
+    display: flex;
+}
+
+.field-2 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-right: 30px;
+    border: 1px solid;
+    border-radius: 0;
+    padding: 6px;
+}
+
+.field-12 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-left: 30px;
+    border: 1px solid;
+    border-radius: 0;
+    padding: 6px;
+}
+
+.double {
+    font-size: 12px;
+}

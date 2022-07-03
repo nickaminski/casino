@@ -1,0 +1,10 @@
+<div class="box">
+    <div class="lay-odds" (click)="layOdds()"></div>
+    <div class="buy" (click)="buy()"></div>
+    <div class="place" (click)="place()">
+        <div [class.rotate]="shouldRotate">
+            {{label}}
+        </div>
+    </div>
+    <div class="come-travel"></div>
+</div>

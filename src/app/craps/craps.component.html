@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="board" (click)="clickBoard()">
+        <app-box-number (onBuy)="onBuy($event)" (onLayOdds)="onLayOdds($event)" (onPlace)="onPlace($event)" [buyBet]="state.box4.buyBet" [layBet]="state.box4.layBet" [comeBet]="state.box4.comeBet" [placeBet]="state.box4.placeBet" label="4" style="grid-column: 1 / span 1; grid-row: 1 / span 2;"></app-box-number>
+        <app-box-number (onBuy)="onBuy($event)" (onLayOdds)="onLayOdds($event)" (onPlace)="onPlace($event)" [buyBet]="state.box5.buyBet" [layBet]="state.box5.layBet" [comeBet]="state.box5.comeBet" [placeBet]="state.box5.placeBet" label="5" style="grid-column: 2 / span 1; grid-row: 1 / span 2;"></app-box-number>
+        <app-box-number (onBuy)="onBuy($event)" (onLayOdds)="onLayOdds($event)" (onPlace)="onPlace($event)" [buyBet]="state.box6.buyBet" [layBet]="state.box6.layBet" [comeBet]="state.box6.comeBet" [placeBet]="state.box6.placeBet" label="Six" [shouldRotate]="true" style="grid-column: 3 / span 1; grid-row: 1 / span 2;"></app-box-number>
+        <app-box-number (onBuy)="onBuy($event)" (onLayOdds)="onLayOdds($event)" (onPlace)="onPlace($event)" [buyBet]="state.box8.buyBet" [layBet]="state.box8.layBet" [comeBet]="state.box8.comeBet" [placeBet]="state.box8.placeBet" label="8" style="grid-column: 4 / span 1; grid-row: 1 / span 2;"></app-box-number>
+        <app-box-number (onBuy)="onBuy($event)" (onLayOdds)="onLayOdds($event)" (onPlace)="onPlace($event)" [buyBet]="state.box9.buyBet" [layBet]="state.box9.layBet" [comeBet]="state.box9.comeBet" [placeBet]="state.box9.placeBet" label="Nine" [shouldRotate]="true" style="grid-column: 5 / span 1; grid-row: 1 / span 2;"></app-box-number>
+        <app-box-number (onBuy)="onBuy($event)" (onLayOdds)="onLayOdds($event)" (onPlace)="onPlace($event)" [buyBet]="state.box10.buyBet" [layBet]="state.box10.layBet" [comeBet]="state.box10.comeBet" [placeBet]="state.box10.placeBet" label="10" style="grid-column: 6 / span 1; grid-row: 1 / span 2;"></app-box-number>
+        <div class="dont-come-bar" (click)="onDontComeBet()">
+            <div>Don't</div>
+            <div>Come</div>
+            <div>Bar</div>
+        </div>
+        <!--
+            <div class="dont-pass-bar-side">
+                <div>Don't</div>
+                <div>Pass</div>
+                <div>Bar</div>
+            </div>
+            <div class="pass-line-side">
+                <div>
+                    Pass Line
+                </div>
+            </div>
+        -->
+        <div class="come">
+            Come
+        </div>
+        <div class="field">
+            <div class="field-numbers">
+                <div class="field-2">2<div class="double">PAYS DOUBLE</div></div>
+                <div>3-4-9-10-11</div>
+                <div class="field-12">12<div class="double">PAYS DOUBLE</div></div>
+            </div>
+            <div>
+                Field
+            </div>
+        </div>
+        <div class="dont-pass-bar-bottom">
+            Don't Pass Bar
+        </div>
+        <div class="big68">
+            6 Big 8
+        </div>
+        <div class="pass-line-bottom">
+            <div>
+                Pass Line
+            </div>
+        </div>
+    </div>
+</div>
+<app-chip-rack (onBetChanges)="onBetChange($event)"></app-chip-rack>
