@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-chip-rack',
@@ -11,10 +11,10 @@ export class ChipRackComponent implements OnInit {
   @Input() bankroll: number;
   @Output() onBetChanges = new EventEmitter<any>();
 
-  betInputControl = new FormControl('');
+  betInputControl = new UntypedFormControl();
 
   constructor() {
-    this.bankroll = 100;
+    this.bankroll = 500;
   }
 
   ngOnInit(): void {
@@ -24,8 +24,7 @@ export class ChipRackComponent implements OnInit {
         return;
       }
       this.onBetChanges.emit(Number(value));
-    }
-      );
+    });
   }
 
 }

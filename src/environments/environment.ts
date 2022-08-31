@@ -5,6 +5,9 @@
 export const environment = {
   production: false
 };
+export const api_url = 'http://localhost:56841/api';
+export const hub_Url = 'http://localhost:56841/chat';
+export const logger_max_retries = 3;
 
 /*
  * For easier debugging in development mode, you can import the following file
